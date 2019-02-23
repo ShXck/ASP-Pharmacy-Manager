@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
+using System.Web.Http.Cors;
 
 namespace ASP_Rest_Pharmacy
 {
@@ -9,6 +10,8 @@ namespace ASP_Rest_Pharmacy
     {
         public static void Register(HttpConfiguration config)
         {
+            var cors = new EnableCorsAttribute("http://localhost:4200/", "*", "*");
+            config.EnableCors(cors);
             // Configuración y servicios de API web
 
             // Rutas de API web

@@ -94,3 +94,6 @@ C:\Users\DELL\source\repos\ASP-Rest-Pharmacy\ASP-Rest-Pharmacy\obj\Debug\ASP-Res
 C:\Users\DELL\source\repos\ASP-Rest-Pharmacy\ASP-Rest-Pharmacy\obj\Debug\ASP-Rest-Pharmacy.csproj.CopyComplete
 C:\Users\DELL\source\repos\ASP-Rest-Pharmacy\ASP-Rest-Pharmacy\obj\Debug\ASP-Rest-Pharmacy.dll
 C:\Users\DELL\source\repos\ASP-Rest-Pharmacy\ASP-Rest-Pharmacy\obj\Debug\ASP-Rest-Pharmacy.pdb
+C:\Users\DELL\source\repos\ASP-Rest-Pharmacy\ASP-Rest-Pharmacy\bin\System.Web.Cors.dll
+C:\Users\DELL\source\repos\ASP-Rest-Pharmacy\ASP-Rest-Pharmacy\bin\System.Web.Http.Cors.dll
+C:\Users\DELL\source\repos\ASP-Rest-Pharmacy\ASP-Rest-Pharmacy\bin\System.Web.Http.Cors.xml
