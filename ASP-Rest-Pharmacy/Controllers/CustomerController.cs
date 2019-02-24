@@ -10,7 +10,7 @@ using System.Web.Http.Cors;
 
 namespace ASP_Rest_Pharmacy.Controllers
 {
-    [EnableCors(origins: "http://localhost:4200/", headers: "*", methods: "get,post")]
+    [EnableCors(origins: "http://localhost:4200/", headers: "*", methods: "*")]
     public class CustomerController : ApiController
     {
         private static List<Customer> customers = new List<Customer>();
