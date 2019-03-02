@@ -65,6 +65,7 @@ namespace ASP_Rest_Pharmacy.Controllers
                     cust.Address = new_cust.Address;
                     cust.Birthday = new_cust.Address;
                     cust.Name = new_cust.Name;
+                    cust.Lastname = new_cust.Lastname;
                     cust.MedicalHistory = new_cust.MedicalHistory;
                     cust.PhoneNumber = new_cust.PhoneNumber;
                     return Ok();

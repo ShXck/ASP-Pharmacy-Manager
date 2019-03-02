@@ -9,6 +9,7 @@ namespace ASP_Rest_Pharmacy.Classes
     {
         public string ID;
         public string Name;
+        public string Lastname;
         public string Address;
         public string DoctorID;
     }

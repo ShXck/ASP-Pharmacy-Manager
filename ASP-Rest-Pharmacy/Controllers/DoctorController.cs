@@ -60,6 +60,7 @@ namespace ASP_Rest_Pharmacy.Controllers
                     Doctor doc = Doctors.ElementAt(i);
                     doc.Address = new_doc.Address;
                     doc.Name = new_doc.Name;
+                    doc.Lastname = new_doc.Lastname;
                     doc.ID = new_doc.ID;
                     return Ok();
                 }

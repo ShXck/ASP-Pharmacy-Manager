@@ -11,6 +11,7 @@ namespace ASP_Rest_Pharmacy.App_Start
     {
         public string ID;
         public string Name;
+        public string Lastname;
         public string Address;
         public string Birthday;
         public int PhoneNumber;
