@@ -13,24 +13,24 @@ namespace ASP_Rest_Pharmacy.Controllers
     [EnableCors(origins: "http://localhost:4200/", headers: "*", methods: "*")]
     public class RecipeController : ApiController
     {
-        private static List<Recipe> Recipes = new List<Recipe>();
+        private static List<Recipe> recipes = new List<Recipe>();
 
         [HttpGet]
         [Route("recipes")]
         [DisableCors]
         public IHttpActionResult Get()
         {
-            return Ok(Recipes);
+            return Ok(recipes);
         }
 
         [HttpGet]
         [Route("recipes/{id}")]
         [DisableCors]
         public IHttpActionResult Get([FromUri]string id)
-        {
-            for (int i = 0; i < Recipes.Count; i++)
+        {            
+            for (int i = 0; i < recipes.Count; i++)
             {
-                if (Recipes.ElementAt(i).RecpID.Equals(id)) return Ok(Recipes.ElementAt(i));
+                if (recipes.ElementAt(i).RecpID.Equals(id)) return Ok(recipes.ElementAt(i));
             }
             return NotFound();
         }
@@ -42,7 +42,7 @@ namespace ASP_Rest_Pharmacy.Controllers
         {
             System.Diagnostics.Debug.WriteLine(value);
             Recipe new_cust = JsonConvert.DeserializeObject<Recipe>(value);
-            Recipes.Add(new_cust);
+            recipes.Add(new_cust);
             return Ok();
         }
 
@@ -53,11 +53,11 @@ namespace ASP_Rest_Pharmacy.Controllers
         {
             Recipe new_rcp = JsonConvert.DeserializeObject<Recipe>(value);
 
-            for (int i = 0; i < Recipes.Count; i++)
+            for (int i = 0; i < recipes.Count; i++)
             {
-                if (Recipes.ElementAt(i).RecpID.Equals(id))
+                if (recipes.ElementAt(i).RecpID.Equals(id))
                 {
-                    Recipe recp = Recipes.ElementAt(i);
+                    Recipe recp = recipes.ElementAt(i);
                     recp.Doctor = new_rcp.Doctor;
                     recp.Medicines = new_rcp.Medicines;
                     return Ok();
@@ -71,11 +71,11 @@ namespace ASP_Rest_Pharmacy.Controllers
         [DisableCors]
         public IHttpActionResult Delete([FromUri] string id)
         {
-            for (int i = 0; i < Recipes.Count; i++)
+            for (int i = 0; i < recipes.Count; i++)
             {
-                if (Recipes.ElementAt(i).RecpID.Equals(id))
+                if (recipes.ElementAt(i).RecpID.Equals(id))
                 {
-                    Recipes.RemoveAt(i);
+                    recipes.RemoveAt(i);
                     return Ok();
                 }
             }

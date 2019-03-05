@@ -10,8 +10,8 @@ namespace ASP_Rest_Pharmacy.Classes
         public string ID;
         public string PickUpBranch;
         public string Client;
-        public int PhoneNumber;
-        public List<Medicine> Content;
+        public string PhoneNumber;
+        public string Content;
         public string PickUpTime;
         public string Status;
     }

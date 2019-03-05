@@ -30,6 +30,7 @@ namespace ASP_Rest_Pharmacy.Controllers
         {
             for (int i = 0; i < Packages.Count; i++)
             {
+                System.Diagnostics.Debug.WriteLine(Packages.ElementAt(i).ID);
                 if (Packages.ElementAt(i).ID.Equals(id)) return Ok(Packages.ElementAt(i));
             }
             return NotFound();

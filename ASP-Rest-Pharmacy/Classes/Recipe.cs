@@ -7,8 +7,8 @@ namespace ASP_Rest_Pharmacy.Classes
 {
     public class Recipe
     {
-        public int RecpID;
+        public string RecpID;
         public string Doctor;
-        public List<Medicine> Medicines;
+        public string Medicines;
     }
 }
