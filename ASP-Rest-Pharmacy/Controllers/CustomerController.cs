@@ -45,7 +45,7 @@ namespace ASP_Rest_Pharmacy.Controllers
             return NotFound();
         }
 
-        /        /// <summary>
+        /// <summary>
         /// Crea un nuevo doctor.
         /// </summary>
         /// <param name="value">El json con la información del doctor.</param>
@@ -91,7 +91,7 @@ namespace ASP_Rest_Pharmacy.Controllers
             return NotFound();
         }
 
-        //// <summary>
+        /// <summary>
         /// Elimina un cliente.
         /// </summary>
         /// <param name="id">La id del objeto que quiere ser eliminado</param>

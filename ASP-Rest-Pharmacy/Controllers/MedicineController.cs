@@ -44,7 +44,6 @@ namespace ASP_Rest_Pharmacy.Controllers
             return NotFound();
         }
 
-
         /// <summary>
         /// Crea una nueva medicina.
         /// </summary>

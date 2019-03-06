@@ -44,11 +44,6 @@ namespace ASP_Rest_Pharmacy.Controllers
             return NotFound();
         }
 
-        /// <summary>
-        /// Crea un nueva nueva sucursal.
-        /// </summary>
-        /// <param name="value">El json con la información de la sucursal.</param>
-        /// <returns>El resultado de la opreación.</returns>
         [HttpPost]
         [Route("Branchs/new")]
         [DisableCors]

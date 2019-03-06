@@ -40,6 +40,7 @@ namespace ASP_Rest_Pharmacy.Controllers
             for (int i = 0; i < Roles.Count; i++)
             {
                 if (Roles.ElementAt(i).Name.Equals(name)) return Ok(Roles.ElementAt(i));
+
             }
             return NotFound();
         }

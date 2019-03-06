@@ -5,6 +5,9 @@ using System.Web;
 
 namespace ASP_Rest_Pharmacy.Classes
 {
+    /// <summary>
+    /// Clase Sucursal
+    /// </summary>
     public class Branch
     {
         public string Name;

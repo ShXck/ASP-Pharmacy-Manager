@@ -1,5 +1,4 @@
-﻿
-using ASP_Rest_Pharmacy.Classes;
+﻿using ASP_Rest_Pharmacy.Classes;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -40,7 +39,7 @@ namespace ASP_Rest_Pharmacy.Controllers
         {
             for (int i = 0; i < Doctors.Count; i++)
             {
-                if (Doctors.ElementAt(i).DoctorID.Equals(id)) return Ok(Doctors.ElementAt(i));
+                if (Doctors.ElementAt(i).ID.Equals(id)) return Ok(Doctors.ElementAt(i));
             }
             return NotFound();
         }
@@ -76,7 +75,7 @@ namespace ASP_Rest_Pharmacy.Controllers
 
             for (int i = 0; i < Doctors.Count; i++)
             {
-                if (Doctors.ElementAt(i).DoctorID.Equals(id))
+                if (Doctors.ElementAt(i).ID.Equals(id))
                 {
                     Doctor doc = Doctors.ElementAt(i);
                     doc.Address = new_doc.Address;
@@ -101,7 +100,7 @@ namespace ASP_Rest_Pharmacy.Controllers
         {
             for (int i = 0; i < Doctors.Count; i++)
             {
-                if (Doctors.ElementAt(i).DoctorID.Equals(id))
+                if (Doctors.ElementAt(i).ID.Equals(id))
                 {
                     Doctors.RemoveAt(i);
                     return Ok();

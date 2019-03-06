@@ -16,5 +16,8 @@ namespace ASP_Rest_Pharmacy.App_Start
         public string Birthday;
         public string PhoneNumber;
         public string MedicalHistory;
+        public string Password;
+        public string Pharmacy;
+        public string Rol;
     }
 }
