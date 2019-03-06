@@ -15,6 +15,10 @@ namespace ASP_Rest_Pharmacy.Controllers
     {
         private static List<Role> Roles = new List<Role>();
 
+        /// <summary>
+        /// Obtiene la lista de roles.
+        /// </summary>
+        /// <returns>La lista de roles en formato json</returns>
         [HttpGet]
         [Route("roles")]
         [DisableCors]
@@ -23,6 +27,11 @@ namespace ASP_Rest_Pharmacy.Controllers
             return Ok(Roles);
         }
 
+        /// <summary>
+        /// Obtiene un rol por su id.
+        /// </summary>
+        /// <param name="id">el id del rol</param>
+        /// <returns>El rol encontrado.</returns>
         [HttpGet]
         [Route("roles/{name}")]
         [DisableCors]
@@ -35,6 +44,11 @@ namespace ASP_Rest_Pharmacy.Controllers
             return NotFound();
         }
 
+        /// <summary>
+        /// Crea un nuevo rol.
+        /// </summary>
+        /// <param name="value">El json con la información del rol.</param>
+        /// <returns>El resultado de la operación.</returns>
         [HttpPost]
         [Route("roles/new")]
         [DisableCors]
@@ -46,6 +60,12 @@ namespace ASP_Rest_Pharmacy.Controllers
             return Ok();
         }
 
+        /// <summary>
+        /// Actualiza la información de un rol.
+        /// </summary>
+        /// <param name="id">la id del rol.</param>
+        /// <param name="value">La información actualizada</param>
+        /// <returns>El resultado de la operación.</returns>
         [HttpPut]
         [Route("roles/update/{name}")]
         [DisableCors]
@@ -66,6 +86,11 @@ namespace ASP_Rest_Pharmacy.Controllers
             return NotFound();
         }
 
+        /// <summary>
+        /// Elimina un role.
+        /// </summary>
+        /// <param name="id">La id del objeto que quiere ser eliminado</param>
+        /// <returns>El resultado de la operación</returns>
         [HttpDelete]
         [Route("roles/delete/{name}")]
         [DisableCors]

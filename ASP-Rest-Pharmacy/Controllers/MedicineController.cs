@@ -15,6 +15,10 @@ namespace ASP_Rest_Pharmacy.Controllers
     {
         private static List<Medicine> Medicines = new List<Medicine>();
 
+        /// <summary>
+        /// Obtiene la lista de medicinas.
+        /// </summary>
+        /// <returns>La lista de medicinas en formato json</returns>
         [HttpGet]
         [Route("medicines")]
         [DisableCors]
@@ -23,6 +27,11 @@ namespace ASP_Rest_Pharmacy.Controllers
             return Ok(Medicines);
         }
 
+        /// <summary>
+        /// Obtiene una medicina por su id.
+        /// </summary>
+        /// <param name="id">el id de la medicina</param>
+        /// <returns>La medicina encontrado.</returns>
         [HttpGet]
         [Route("medicines/{name}")]
         [DisableCors]
@@ -35,6 +44,12 @@ namespace ASP_Rest_Pharmacy.Controllers
             return NotFound();
         }
 
+
+        /// <summary>
+        /// Crea una nueva medicina.
+        /// </summary>
+        /// <param name="value">El json con la información de la medicina.</param>
+        /// <returns>El resultado de la opreación.</returns>
         [HttpPost]
         [Route("medicines/new")]
         [DisableCors]
@@ -46,6 +61,12 @@ namespace ASP_Rest_Pharmacy.Controllers
             return Ok();
         }
 
+        /// <summary>
+        /// Actualiza la información de una medicina.
+        /// </summary>
+        /// <param name="id">la id de la medicina.</param>
+        /// <param name="value">La información actualizada</param>
+        /// <returns>Ek resultado de la operación.</returns>
         [HttpPut]
         [Route("medicines/update/{name}")]
         [DisableCors]
@@ -68,6 +89,11 @@ namespace ASP_Rest_Pharmacy.Controllers
             return NotFound();
         }
 
+        /// <summary>
+        /// Elimina una medicina.
+        /// </summary>
+        /// <param name="id">La id del objeto que quiere ser eliminado</param>
+        /// <returns>El resultado de la operación</returns>
         [HttpDelete]
         [Route("medicines/delete/{name}")]
         [DisableCors]

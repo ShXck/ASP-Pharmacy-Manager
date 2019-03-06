@@ -1,4 +1,5 @@
-﻿using ASP_Rest_Pharmacy.Classes;
+﻿
+using ASP_Rest_Pharmacy.Classes;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -15,6 +16,10 @@ namespace ASP_Rest_Pharmacy.Controllers
     {
         private static List<Doctor> Doctors = new List<Doctor>();
 
+        /// <summary>
+        /// Obtiene la lista de doctores.
+        /// </summary>
+        /// <returns>La lista de doctores en formato json</returns>
         [HttpGet]
         [Route("doctors")]
         [DisableCors]
@@ -23,6 +28,11 @@ namespace ASP_Rest_Pharmacy.Controllers
             return Ok(Doctors);
         }
 
+        /// <summary>
+        /// Obtiene un doctor por su id.
+        /// </summary>
+        /// <param name="id">el id del doctor</param>
+        /// <returns>El doctor encontrado.</returns>
         [HttpGet]
         [Route("doctors/{id}")]
         [DisableCors]
@@ -35,6 +45,11 @@ namespace ASP_Rest_Pharmacy.Controllers
             return NotFound();
         }
 
+        /// <summary>
+        /// Crea un nuevo doctor.
+        /// </summary>
+        /// <param name="value">El json con la información del doctor.</param>
+        /// <returns>El resultado de la opreación.</returns>
         [HttpPost]
         [Route("doctors/new")]
         [DisableCors]
@@ -46,6 +61,12 @@ namespace ASP_Rest_Pharmacy.Controllers
             return Ok();
         }
 
+        /// <summary>
+        /// Actualiza la información de un cliente.
+        /// </summary>
+        /// <param name="id">la id del cliente.</param>
+        /// <param name="value">La información actualizada</param>
+        /// <returns>El resultado de la operación.</returns>
         [HttpPut]
         [Route("doctors/update/{id}")]
         [DisableCors]
@@ -68,6 +89,11 @@ namespace ASP_Rest_Pharmacy.Controllers
             return NotFound();
         }
 
+        /// <summary>
+        /// Elimina un doctor.
+        /// </summary>
+        /// <param name="id">La id del objeto que quiere ser eliminado</param>
+        /// <returns>El resultado de la operación</returns>
         [HttpDelete]
         [Route("doctors/delete/{id}")]
         [DisableCors]

@@ -15,6 +15,10 @@ namespace ASP_Rest_Pharmacy.Controllers
     {
         private static List<Customer> customers = new List<Customer>();
 
+        /// <summary>
+        /// Obtiene la lista de clientes.
+        /// </summary>
+        /// <returns>La lista de clientes en formato json</returns>
         [HttpGet]
         [Route("customers")]
         [DisableCors]
@@ -24,7 +28,11 @@ namespace ASP_Rest_Pharmacy.Controllers
             // return Ok(JsonConvert.SerializeObject(customers));
         }
 
-        // GET: api/Customer/5
+        /// <summary>
+        /// Obtiene un clientes por su id.
+        /// </summary>
+        /// <param name="id">el id del cliente</param>
+        /// <returns>El cliente encontrado.</returns>
         [HttpGet]
         [Route("customers/{id}")]
         [DisableCors]
@@ -37,7 +45,11 @@ namespace ASP_Rest_Pharmacy.Controllers
             return NotFound();
         }
 
-        // POST: api/Customer
+        /        /// <summary>
+        /// Crea un nuevo doctor.
+        /// </summary>
+        /// <param name="value">El json con la información del doctor.</param>
+        /// <returns>El resultado de la opreación.</returns>
         [HttpPost]
         [Route("customers/new")]
         [DisableCors]
@@ -49,7 +61,12 @@ namespace ASP_Rest_Pharmacy.Controllers
             return Ok();
         }
 
-        // PUT: api/Customer/5
+        /// <summary>
+        /// Actualiza la información de un doctor.
+        /// </summary>
+        /// <param name="id">la id del doctor.</param>
+        /// <param name="value">La información actualizada</param>
+        /// <returns>Ek resultado de la operación.</returns>
         [HttpPut]
         [Route("customers/update/{id}")]
         [DisableCors]
@@ -74,7 +91,11 @@ namespace ASP_Rest_Pharmacy.Controllers
             return NotFound();
         }
 
-        // DELETE: api/Customer/5
+        //// <summary>
+        /// Elimina un cliente.
+        /// </summary>
+        /// <param name="id">La id del objeto que quiere ser eliminado</param>
+        /// <returns>El resultado de la operación</returns>
         [HttpDelete]
         [Route("customers/delete/{id}")]
         [DisableCors]

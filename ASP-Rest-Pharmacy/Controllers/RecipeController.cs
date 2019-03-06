@@ -15,6 +15,10 @@ namespace ASP_Rest_Pharmacy.Controllers
     {
         private static List<Recipe> recipes = new List<Recipe>();
 
+        /// <summary>
+        /// Obtiene la lista de recetas.
+        /// </summary>
+        /// <returns>La lista de recetas en formato json</returns>
         [HttpGet]
         [Route("recipes")]
         [DisableCors]
@@ -23,6 +27,11 @@ namespace ASP_Rest_Pharmacy.Controllers
             return Ok(recipes);
         }
 
+        /// <summary>
+        /// Obtiene una receta por su id.
+        /// </summary>
+        /// <param name="id">el id de la receta</param>
+        /// <returns>La receta encontrado.</returns>
         [HttpGet]
         [Route("recipes/{id}")]
         [DisableCors]
@@ -35,6 +44,11 @@ namespace ASP_Rest_Pharmacy.Controllers
             return NotFound();
         }
 
+        /// <summary>
+        /// Crea un paquete doctor.
+        /// </summary>
+        /// <param name="value">El json con la información del paquete.</param>
+        /// <returns>El resultado de la opreación.</returns>
         [HttpPost]
         [Route("recipes/new")]
         [DisableCors]
@@ -46,6 +60,12 @@ namespace ASP_Rest_Pharmacy.Controllers
             return Ok();
         }
 
+        /// <summary>
+        /// Actualiza la información de un paquete.
+        /// </summary>
+        /// <param name="id">la id del paquete.</param>
+        /// <param name="value">La información actualizada</param>
+        /// <returns>El resultado de la operación.</returns>
         [HttpPut]
         [Route("recipes/update/{id}")]
         [DisableCors]
@@ -66,6 +86,11 @@ namespace ASP_Rest_Pharmacy.Controllers
             return NotFound();
         }
 
+        /// <summary>
+        /// Elimina un paquete.
+        /// </summary>
+        /// <param name="id">La id del objeto que quiere ser eliminado</param>
+        /// <returns>El resultado de la operación</returns>
         [HttpDelete]
         [Route("recipes/delete/{id}")]
         [DisableCors]
